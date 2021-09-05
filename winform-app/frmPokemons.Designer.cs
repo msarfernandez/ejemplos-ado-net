@@ -30,7 +30,9 @@ namespace winform_app
         private void InitializeComponent()
         {
             this.dgvPokemons = new System.Windows.Forms.DataGridView();
+            this.pbxPokemon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPokemons
@@ -40,18 +42,30 @@ namespace winform_app
             this.dgvPokemons.Name = "dgvPokemons";
             this.dgvPokemons.Size = new System.Drawing.Size(458, 232);
             this.dgvPokemons.TabIndex = 0;
+            this.dgvPokemons.SelectionChanged += new System.EventHandler(this.dgvPokemons_SelectionChanged);
+            // 
+            // pbxPokemon
+            // 
+            this.pbxPokemon.Location = new System.Drawing.Point(486, 55);
+            this.pbxPokemon.Name = "pbxPokemon";
+            this.pbxPokemon.Size = new System.Drawing.Size(240, 232);
+            this.pbxPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxPokemon.TabIndex = 1;
+            this.pbxPokemon.TabStop = false;
             // 
             // frmPokemons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 342);
+            this.ClientSize = new System.Drawing.Size(748, 342);
+            this.Controls.Add(this.pbxPokemon);
             this.Controls.Add(this.dgvPokemons);
             this.Name = "frmPokemons";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pokemons";
             this.Load += new System.EventHandler(this.frmPokemons_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -59,6 +73,7 @@ namespace winform_app
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPokemons;
+        private System.Windows.Forms.PictureBox pbxPokemon;
     }
 }
 
