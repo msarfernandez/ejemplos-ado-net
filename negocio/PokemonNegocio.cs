@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using dominio;
 
-namespace winform_app
+namespace negocio
 {
-    class PokemonNegocio
+    public class PokemonNegocio
     {
         public List<Pokemon> listar()
         {
@@ -50,5 +51,6 @@ namespace winform_app
             }
 
         }
+
     }
 }
