@@ -10,6 +10,7 @@ namespace negocio
 {
     public class PokemonNegocio
     {
+
         public List<Pokemon> listar()
         {
             List<Pokemon> lista = new List<Pokemon>();
@@ -51,6 +52,13 @@ namespace negocio
             }
 
         }
+
+        public void agregar(Pokemon nuevo)
+        {
+
+        }
+
+        public void modificar(Pokemon modificar) { }
 
     }
 }
