@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAltaPokemon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaPokemon.Designer.cs">
+      <DependentUpon>frmAltaPokemon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPokemons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAltaPokemon.resx">
+      <DependentUpon>frmAltaPokemon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPokemons.resx">
       <DependentUpon>frmPokemons.cs</DependentUpon>
     </EmbeddedResource>

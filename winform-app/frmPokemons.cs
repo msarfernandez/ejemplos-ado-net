@@ -47,5 +47,11 @@ namespace winform_app
                 pbxPokemon.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaPokemon alta = new frmAltaPokemon();
+            alta.ShowDialog();
+        }
     }
 }
