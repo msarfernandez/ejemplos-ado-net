@@ -37,6 +37,10 @@ namespace winform_app
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblDebilidad = new System.Windows.Forms.Label();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.cboDebilidad = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +55,7 @@ namespace winform_app
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 104);
+            this.label2.Location = new System.Drawing.Point(74, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 1;
@@ -60,7 +64,7 @@ namespace winform_app
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 154);
+            this.label3.Location = new System.Drawing.Point(58, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -70,21 +74,21 @@ namespace winform_app
             // 
             this.txtNumero.Location = new System.Drawing.Point(130, 54);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(121, 20);
             this.txtNumero.TabIndex = 3;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(130, 101);
+            this.txtNombre.Location = new System.Drawing.Point(130, 80);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(130, 151);
+            this.txtDescripcion.Location = new System.Drawing.Point(130, 106);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
             // btnAceptar
@@ -107,11 +111,51 @@ namespace winform_app
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(93, 135);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(31, 13);
+            this.lblTipo.TabIndex = 8;
+            this.lblTipo.Text = "Tipo:";
+            // 
+            // lblDebilidad
+            // 
+            this.lblDebilidad.AutoSize = true;
+            this.lblDebilidad.Location = new System.Drawing.Point(70, 162);
+            this.lblDebilidad.Name = "lblDebilidad";
+            this.lblDebilidad.Size = new System.Drawing.Size(54, 13);
+            this.lblDebilidad.TabIndex = 9;
+            this.lblDebilidad.Text = "Debilidad:";
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Location = new System.Drawing.Point(130, 132);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(121, 21);
+            this.cboTipo.TabIndex = 10;
+            // 
+            // cboDebilidad
+            // 
+            this.cboDebilidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDebilidad.FormattingEnabled = true;
+            this.cboDebilidad.Location = new System.Drawing.Point(130, 159);
+            this.cboDebilidad.Name = "cboDebilidad";
+            this.cboDebilidad.Size = new System.Drawing.Size(121, 21);
+            this.cboDebilidad.TabIndex = 11;
+            // 
             // frmAltaPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 263);
+            this.ClientSize = new System.Drawing.Size(340, 259);
+            this.Controls.Add(this.cboDebilidad);
+            this.Controls.Add(this.cboTipo);
+            this.Controls.Add(this.lblDebilidad);
+            this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtDescripcion);
@@ -123,6 +167,7 @@ namespace winform_app
             this.Name = "frmAltaPokemon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Pokemon";
+            this.Load += new System.EventHandler(this.frmAltaPokemon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +183,9 @@ namespace winform_app
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblDebilidad;
+        private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.ComboBox cboDebilidad;
     }
 }
