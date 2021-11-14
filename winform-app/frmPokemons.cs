@@ -27,8 +27,18 @@ namespace winform_app
 
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
         {
-            Pokemon seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.UrlImagen);
+            try
+            {
+                if(dgvPokemons.CurrentRow != null)
+                {
+                    Pokemon seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+                    cargarImagen(seleccionado.UrlImagen);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error se Selection Changed de la grilla. " + ex.ToString());
+            }
 
         }
 
@@ -111,6 +121,31 @@ namespace winform_app
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnFiltroRapido_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtFiltroRapido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string filtro = txtFiltroRapido.Text;
+            dgvPokemons.DataSource = null;
+            if (filtro.Length <= 3)
+            {
+                dgvPokemons.DataSource = listaPokemon;
+            }
+            else
+            {
+                List<Pokemon> listaFiltrada;
+                listaFiltrada = listaPokemon.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+
+                dgvPokemons.DataSource = listaFiltrada;
+            }
+
+            dgvPokemons.Columns["UrlImagen"].Visible = false;
+            dgvPokemons.Columns["Id"].Visible = false;
         }
     }
 }

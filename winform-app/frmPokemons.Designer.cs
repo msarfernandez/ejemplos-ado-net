@@ -35,6 +35,9 @@ namespace winform_app
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminarFisico = new System.Windows.Forms.Button();
             this.btnEliminarLogico = new System.Windows.Forms.Button();
+            this.txtFiltroRapido = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnFiltroRapido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).BeginInit();
             this.SuspendLayout();
@@ -100,11 +103,41 @@ namespace winform_app
             this.btnEliminarLogico.UseVisualStyleBackColor = true;
             this.btnEliminarLogico.Click += new System.EventHandler(this.btnEliminarLogico_Click);
             // 
+            // txtFiltroRapido
+            // 
+            this.txtFiltroRapido.Location = new System.Drawing.Point(87, 29);
+            this.txtFiltroRapido.Name = "txtFiltroRapido";
+            this.txtFiltroRapido.Size = new System.Drawing.Size(172, 20);
+            this.txtFiltroRapido.TabIndex = 6;
+            this.txtFiltroRapido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroRapido_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Filtro Rápido:";
+            // 
+            // btnFiltroRapido
+            // 
+            this.btnFiltroRapido.Location = new System.Drawing.Point(265, 27);
+            this.btnFiltroRapido.Name = "btnFiltroRapido";
+            this.btnFiltroRapido.Size = new System.Drawing.Size(123, 23);
+            this.btnFiltroRapido.TabIndex = 8;
+            this.btnFiltroRapido.Text = "Buscar";
+            this.btnFiltroRapido.UseVisualStyleBackColor = true;
+            this.btnFiltroRapido.Click += new System.EventHandler(this.btnFiltroRapido_Click);
+            // 
             // frmPokemons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 327);
+            this.Controls.Add(this.btnFiltroRapido);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtFiltroRapido);
             this.Controls.Add(this.btnEliminarLogico);
             this.Controls.Add(this.btnEliminarFisico);
             this.Controls.Add(this.btnModificar);
@@ -118,6 +151,7 @@ namespace winform_app
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,6 +163,9 @@ namespace winform_app
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminarFisico;
         private System.Windows.Forms.Button btnEliminarLogico;
+        private System.Windows.Forms.TextBox txtFiltroRapido;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnFiltroRapido;
     }
 }
 
