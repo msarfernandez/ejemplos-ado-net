@@ -108,20 +108,22 @@ namespace winform_app
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Location = new System.Drawing.Point(12, 32);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(32, 13);
+            this.lblFiltro.Size = new System.Drawing.Size(69, 13);
             this.lblFiltro.TabIndex = 6;
-            this.lblFiltro.Text = "Filtro:";
+            this.lblFiltro.Text = "Filtro Rápido:";
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(51, 29);
+            this.txtFiltro.Location = new System.Drawing.Point(87, 29);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(185, 20);
             this.txtFiltro.TabIndex = 7;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
+            this.txtFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltro_KeyPress);
             // 
             // btnFiltro
             // 
-            this.btnFiltro.Location = new System.Drawing.Point(242, 27);
+            this.btnFiltro.Location = new System.Drawing.Point(547, 293);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(75, 23);
             this.btnFiltro.TabIndex = 8;
@@ -133,7 +135,7 @@ namespace winform_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 327);
+            this.ClientSize = new System.Drawing.Size(880, 328);
             this.Controls.Add(this.btnFiltro);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lblFiltro);
