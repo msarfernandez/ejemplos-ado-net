@@ -227,6 +227,7 @@ namespace winform_app
                 cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
             }
+
         }
     }
 }
