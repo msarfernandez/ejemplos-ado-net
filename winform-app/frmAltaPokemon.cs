@@ -38,7 +38,6 @@ namespace winform_app
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             PokemonNegocio negocio = new PokemonNegocio();
-
             try
             {
                 if (pokemon == null)
